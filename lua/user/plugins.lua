@@ -50,36 +50,34 @@ return packer.startup(function(use)
     use 'tomasr/molokai'
 
     -- git
-    use {
-        'lewis6991/gitsigns.nvim',
-        config = function()
-            require('gitsigns').setup()
-        end
-    }
+    use 'lewis6991/gitsigns.nvim'
 
-    -- IDE
-    use {                                                                   
-        'nvim-telescope/telescope.nvim',                                    
-        requires = { {'nvim-lua/plenary.nvim'} }                            
-    }                                                                       
+    -- Telescope
+    use 'nvim-telescope/telescope.nvim'
+
+    -- Treesitter
     use {                                                                   
         'nvim-treesitter/nvim-treesitter',                                  
         run = ":TSUpdate",                                                  
-    }                                                                       
-    use 'williamboman/nvim-lsp-installer'                                   
+    }
+
+    -- Nerdtree
     use 'preservim/nerdtree'                                                
 
     -- cmp plugins                                                          
-    use 'neovim/nvim-lspconfig'                                             
-    use 'hrsh7th/cmp-nvim-lsp'                                              
+    use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'                                                
     use 'hrsh7th/cmp-path'                                                  
     use 'hrsh7th/cmp-cmdline'                                               
-    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'                                              
+    use 'saadparwaiz1/cmp_luasnip'                                          
 
     -- snippets                                                             
     use 'L3MON4D3/LuaSnip'                                                  
-    use 'saadparwaiz1/cmp_luasnip'                                          
+
+    -- LSP
+    use 'neovim/nvim-lspconfig'                                             
+    use 'williamboman/nvim-lsp-installer'                                   
 
     -- Golang                                                               
     use {                                                                   
