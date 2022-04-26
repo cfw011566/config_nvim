@@ -19,7 +19,9 @@ keymap('n', '<C-Left>', ':vertical resize -2<CR>', opts)
 keymap('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 
 -- Nvim-Tree
-keymap('n', '<c-n>', ':NvimTreeToggle<CR>', {})
+keymap('n', '<C-n>', ':NvimTreeToggle<CR>', opts)
+keymap('n', '<Leader>r', ':NvimTreeRefresh<CR>', opts)
+keymap('n', '<Leader>n', ':NvimTreeFindFile<CR>', opts)
 
 -- Telescope
 keymap('n', '<Leader>ff', ':Telescope find_files<CR>', {})
