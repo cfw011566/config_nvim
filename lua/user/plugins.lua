@@ -56,35 +56,35 @@ return packer.startup(function(use)
     use 'nvim-telescope/telescope.nvim'
 
     -- Treesitter
-    use {                                                                   
-        'nvim-treesitter/nvim-treesitter',                                  
-        run = ":TSUpdate",                                                  
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ":TSUpdate",
     }
 
     -- Nerdtree
-    use 'preservim/nerdtree'                                                
+    use 'preservim/nerdtree'
 
-    -- cmp plugins                                                          
+    -- cmp plugins
     use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-buffer'                                                
-    use 'hrsh7th/cmp-path'                                                  
-    use 'hrsh7th/cmp-cmdline'                                               
-    use 'hrsh7th/cmp-nvim-lsp'                                              
-    use 'saadparwaiz1/cmp_luasnip'                                          
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'saadparwaiz1/cmp_luasnip'
 
-    -- snippets                                                             
-    use 'L3MON4D3/LuaSnip'                                                  
+    -- snippets
+    use 'L3MON4D3/LuaSnip'
 
     -- LSP
-    use 'neovim/nvim-lspconfig'                                             
-    use 'williamboman/nvim-lsp-installer'                                   
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/nvim-lsp-installer'
 
-    -- Golang                                                               
-    use {                                                                   
-        'ray-x/go.nvim',                                                    
-        config = function()                                                 
-            require('go').setup()                                           
-        end                                                                 
+    -- Golang
+    use {
+        'ray-x/go.nvim',
+        config = function()
+            require('go').setup()
+        end
     }
 
     -- Automatically set up your configuration after cloning packer.nvim
