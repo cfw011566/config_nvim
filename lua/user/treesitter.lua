@@ -8,7 +8,6 @@ if not status_ok then
 end
 
 configs.setup {
-configs.setup {
     ensure_installed = { "go", "julia", "c", "rust" },
     sync_install = false,
     highlight = {
@@ -18,5 +17,5 @@ configs.setup {
     },
     indent = {
         enable = true,
-    },
+    }
 }
