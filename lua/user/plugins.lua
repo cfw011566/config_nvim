@@ -52,6 +52,7 @@ return packer.startup(function(use)
     -- colorscheme
     use 'tomasr/molokai'
     use 'martinsione/darkplus.nvim'
+    use 'tanvirtin/monokai.nvim'
 
     -- git
     use 'lewis6991/gitsigns.nvim'
