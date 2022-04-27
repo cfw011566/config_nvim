@@ -11,8 +11,8 @@ end
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
-  local col = vim.fn.col "." - 1
-  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+    local col = vim.fn.col "." - 1
+    return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
 local kind_icons = {
@@ -49,6 +49,10 @@ cmp.setup({
       expand = function(args)
         luasnip.lsp_expand(args.body) -- For `luasnip` users.
       end,
+    },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
     },
     mapping = {
         ['<C-k>'] = cmp.mapping.select_prev_item(),
@@ -110,7 +114,6 @@ cmp.setup({
 })
 
 -- Set configuration for specific filetype.
---[[
 cmp.setup.filetype('gitcommit', {
     sources = cmp.config.sources({
         { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
@@ -118,7 +121,6 @@ cmp.setup.filetype('gitcommit', {
         { name = 'buffer' },
     })
 })
---]]
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
@@ -136,39 +138,4 @@ cmp.setup.cmdline(':', {
         { name = 'cmdline' }
     })
 })
---]]
-
---[[
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-end
-
--- Setup lspconfig.
-local nvim_lsp = require('lspconfig')
--- setup languages
--- GoLang
-nvim_lsp['gopls'].setup{
-    cmd = {'gopls'},
-    on_attach = on_attach,
-    capabilities = capabilities,
-    settings = {
-        gopls = {
-            experimentalPostfixCompletions = true,
-            analyses = {
-                unusedparams = true,
-                shadow = true,
-            },
-            staticcheck = true,
-        },
-    },
-    init_options = {
-        usePlaceholders = true,
-    }
-}
 --]]
