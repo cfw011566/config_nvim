@@ -13,6 +13,11 @@ lsp_installer.on_server_ready(function(server)
         opts = vim.tbl_deep_extend("force", gopls_opts, opts)
     end
 
+    if server.name == "rust_analyzer" then
+        local rust_analyzer_opts = require("settings.lsp.settings.rust_analyzer")
+        opts = vim.tbl_deep_extend("force", rust_analyzer_opts, opts)
+    end
+
     if server.name == "sumneko_lua" then
         local sumneko_opts = require("settings.lsp.settings.sumneko_lua")
         opts = vim.tbl_deep_extend("force", sumneko_opts, opts)

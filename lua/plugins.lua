@@ -50,9 +50,12 @@ return packer.startup(function(use)
     use "kyazdani42/nvim-tree.lua"
 
     -- colorscheme
-    use 'tomasr/molokai'
-    use 'martinsione/darkplus.nvim'
+    use 'sainnhe/sonokai'
     use 'tanvirtin/monokai.nvim'
+    use 'martinsione/darkplus.nvim'
+    use 'tomasr/molokai'
+    -- use 'sickill/vim-monokai'
+    -- use 'christianchiarulli/nvcode-color-schemes.vim'
 
     -- git
     use 'lewis6991/gitsigns.nvim'
@@ -88,6 +91,9 @@ return packer.startup(function(use)
             require('go').setup()
         end
     }
+
+    -- Rust
+    use 'simrat39/rust-tools.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
