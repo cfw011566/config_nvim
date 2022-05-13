@@ -190,8 +190,6 @@ local opts = {
 
 rust_tools.setup(opts)
 
---]]
-
 local opts = {
     tools = { -- rust-tools options
         autoSetHints = true,
@@ -223,5 +221,9 @@ local opts = {
 }
 
 require('rust-tools').setup(opts)
+
+--]]
+
+require('rust-tools').setup({})
 
 -- require('rust-tools.runnables').runnables()

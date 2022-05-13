@@ -4,22 +4,22 @@ local lsp_installer = require("nvim-lsp-installer")
 -- or if the server is already installed).
 lsp_installer.on_server_ready(function(server)
     local opts = {
-        on_attach = require("settings.lsp.handlers").on_attach,
-        capabilities = require("settings.lsp.handlers").capabilities,
+        on_attach = require("user.lsp.handlers").on_attach,
+        capabilities = require("user.lsp.handlers").capabilities,
     }
 
     if server.name == "gopls" then
-        local gopls_opts = require("settings.lsp.settings.gopls")
+        local gopls_opts = require("user.lsp.settings.gopls")
         opts = vim.tbl_deep_extend("force", gopls_opts, opts)
     end
 
     if server.name == "rust_analyzer" then
-        local rust_analyzer_opts = require("settings.lsp.settings.rust_analyzer")
+        local rust_analyzer_opts = require("user.lsp.settings.rust_analyzer")
         opts = vim.tbl_deep_extend("force", rust_analyzer_opts, opts)
     end
 
     if server.name == "sumneko_lua" then
-        local sumneko_opts = require("settings.lsp.settings.sumneko_lua")
+        local sumneko_opts = require("user.lsp.settings.sumneko_lua")
         opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
     end
 

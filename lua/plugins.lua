@@ -94,6 +94,12 @@ return packer.startup(function(use)
 
     -- Rust
     use 'simrat39/rust-tools.nvim'
+    use {
+        'rust-lang/rust.vim',
+        config = function()
+            vim.g.rustfmt_autosave = 1
+        end
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
