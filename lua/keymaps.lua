@@ -20,15 +20,18 @@ keymap('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 
 -- Nvim-Tree
 keymap('n', '<C-n>', ':NvimTreeToggle<CR>', opts)
-keymap('n', '<Leader>r', ':NvimTreeRefresh<CR>', opts)
-keymap('n', '<Leader>n', ':NvimTreeFindFile<CR>', opts)
+-- keymap('n', '<Leader>r', ':NvimTreeRefresh<CR>', opts)
+-- keymap('n', '<Leader>n', ':NvimTreeFindFile<CR>', opts)
 
 -- Telescope
-keymap('n', '<Leader>ff', ':Telescope find_files<CR>', {})
-keymap('n', '<Leader>fg', ':Telescope live_grep<CR>', {})
-keymap('n', '<Leader>fb', ':Telescope buffers<CR>', {})
-keymap('n', '<Leader>fh', ':Telescope help_tags<CR>', {})
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap('n', '<Leader>ff', ':Telescope find_files<CR>', opts)
+keymap('n', '<Leader>fg', ':Telescope live_grep<CR>', opts)
+keymap('n', '<Leader>fb', ':Telescope buffers<CR>', opts)
+keymap('n', '<Leader>fh', ':Telescope help_tags<CR>', opts)
+keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
+keymap("n", "<C-t>", "<cmd>Telescope live_grep<cr>", opts)
 
+-- Rust command
+keymap("n", "<Leader>rr", ":RustRun<CR>", opts)
+keymap("n", "<Leader>rt", ":RustTest<CR>", opts)
+-- vim.api.nvim_command("autocmd FileType rust nmap <Esc>r ':RustRun<CR>'")
