@@ -28,10 +28,10 @@ keymap('n', '<Leader>ff', ':Telescope find_files<CR>', opts)
 keymap('n', '<Leader>fg', ':Telescope live_grep<CR>', opts)
 keymap('n', '<Leader>fb', ':Telescope buffers<CR>', opts)
 keymap('n', '<Leader>fh', ':Telescope help_tags<CR>', opts)
-keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
+-- keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
 keymap("n", "<C-t>", "<cmd>Telescope live_grep<cr>", opts)
 
--- Rust command
+-- Rust
 keymap("n", "<Leader>rr", ":RustRun<CR>", opts)
 keymap("n", "<Leader>rt", ":RustTest<CR>", opts)
 -- vim.api.nvim_command("autocmd FileType rust nmap <Esc>r ':RustRun<CR>'")
