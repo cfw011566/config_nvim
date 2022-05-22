@@ -1,6 +1,6 @@
 -- folding: zo, zc
--- vim.opt.foldmethod = "expr"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
@@ -8,7 +8,7 @@ if not status_ok then
 end
 
 configs.setup {
-    ensure_installed = { "go", "julia", "c", "rust" },
+    ensure_installed = { "go", "c", "rust" },
     sync_install = false,
     ignore_install = { "" }, -- List of parsers to ignore installing
     highlight = {
