@@ -24,3 +24,14 @@ vim.opt.backspace = 'indent,start,eol'
 
 -- not work on Terminal of macOS
 -- vim.opt.termguicolors = true
+
+-- autocmd
+-- auto format when saving rust file (rust-tools.nvim)
+vim.api.nvim_command("autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 200)")
+
+-- auto format when saving go file (go.nvim)
+vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
+
+-- auto open fold
+-- vim.api.nvim_command("autocmd BufReadPost,FileReadPost * normal zR")
+vim.api.nvim_create_autocmd("BufEnter", { pattern = "*", command = "normal zR" })
