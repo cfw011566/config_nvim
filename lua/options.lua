@@ -23,7 +23,7 @@ vim.opt.swapfile = false
 vim.opt.backspace = 'indent,start,eol'
 
 -- not work on Terminal of macOS
--- vim.opt.termguicolors = true
+vim.opt.termguicolors = true
 
 -- autocmd
 -- auto format when saving rust file (rust-tools.nvim)
