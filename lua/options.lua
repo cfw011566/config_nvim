@@ -27,7 +27,13 @@ vim.opt.termguicolors = true
 
 -- autocmd
 -- auto format when saving rust file (rust-tools.nvim)
-vim.api.nvim_command("autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 200)")
+-- vim.api.nvim_command("autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 200)")
+-- vim.lsp.buf.formatting_sync deprecated
+-- from neovim doc
+-- " Auto-format *.rs (rust) files prior to saving them
+-- " (async = false is the default for format)
+-- autocmd BufWritePre *.rs lua vim.lsp.buf.format({ async = false })
+vim.api.nvim_command("autocmd BufWritePre *.rs lua vim.lsp.buf.format({ async = false })")
 
 -- auto format when saving go file (go.nvim)
 vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
