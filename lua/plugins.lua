@@ -48,7 +48,7 @@ return packer.startup(function(use)
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
 
-    use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+    use "nvim-lua/popup.nvim"   -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
     use {
@@ -64,16 +64,14 @@ return packer.startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
-    -- colorscheme
-    -- use 'sainnhe/sonokai'
-    use 'tanvirtin/monokai.nvim'
-    -- use 'martinsione/darkplus.nvim'
+    -- Colorscheme
     use 'tomasr/molokai'
     use 'Mofiqul/dracula.nvim'
-    -- use 'sickill/vim-monokai'
-    -- use 'christianchiarulli/nvcode-color-schemes.vim'
+    use 'tanvirtin/monokai.nvim'
+    -- use 'martinsione/darkplus.nvim'
+    -- use 'sainnhe/sonokai'
 
-    -- git
+    -- Git
     use 'lewis6991/gitsigns.nvim'
 
     -- Telescope
@@ -85,12 +83,17 @@ return packer.startup(function(use)
         run = ":TSUpdate",
     }
 
-    -- cmp plugins
+    -- completion framework:
     use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-cmdline'
+
+    -- LSP completion source:
     use 'hrsh7th/cmp-nvim-lsp'
+
+    -- Useful completion sources:
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-cmdline'
+
     use 'saadparwaiz1/cmp_luasnip'
 
     -- snippets
