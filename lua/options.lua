@@ -1,29 +1,51 @@
+--[[ options.lua ]]
+local opt = vim.opt
+local cmd = vim.api.nvim_command
+
 -- :help options
-vim.opt.backup = false
--- vim.opt.clipboard = "unnamedplus"
-vim.opt.incsearch = true
-vim.opt.errorbells =false
-vim.opt.smartcase = false
-vim.opt.undodir = '~/.vim/undodir'
 
-vim.opt.cursorline = true
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.wrap = false
-vim.opt.colorcolumn = '80,132'
+-- [[ Context ]]
+opt.colorcolumn = '80,132'
+opt.cursorline = true
+opt.number = true
+opt.relativenumber = true
+opt.wrap = false
 
-vim.opt.expandtab = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.opt.swapfile = false
+-- [[ Filetypes ]]
+opt.encoding = 'utf8'
+opt.fileencoding = 'utf8'
 
-vim.opt.backspace = 'indent,start,eol'
+-- [[ Theme ]]
+opt.syntax = "ON"
+opt.termguicolors = true    -- not work on Terminal of macOS
+-- cmd('colorscheme dracula')
+cmd([[ colorscheme molokai]])
+-- vim.cmd([[colorscheme molokai]])
+-- vim.cmd([[colorscheme sonokai]])
 
--- not work on Terminal of macOS
-vim.opt.termguicolors = true
+-- [[ Search ]]
+opt.incsearch = true
+opt.hlsearch = true
+-- opt.ignorecase = true
+-- opt.smartcase = true
+
+-- [[ Whitespace ]]
+opt.expandtab = true
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.autoindent = true
+opt.smartindent = true
+
+-- [[ Other ]]
+opt.swapfile = false
+opt.backup = false
+opt.errorbells =false
+opt.smartcase = false
+opt.undodir = '~/.vim/undodir'
+opt.backspace = 'indent,start,eol'
+-- opt.clipboard = "unnamedplus"
+
 
 -- autocmd
 -- auto format when saving rust file (rust-tools.nvim)
@@ -33,7 +55,7 @@ vim.opt.termguicolors = true
 -- " Auto-format *.rs (rust) files prior to saving them
 -- " (async = false is the default for format)
 -- autocmd BufWritePre *.rs lua vim.lsp.buf.format({ async = false })
-vim.api.nvim_command("autocmd BufWritePre *.rs lua vim.lsp.buf.format({ async = false })")
+cmd("autocmd BufWritePre *.rs lua vim.lsp.buf.format({ async = false })")
 
 -- auto format when saving go file (go.nvim)
 vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
@@ -42,45 +64,3 @@ vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').
 -- vim.api.nvim_command("autocmd BufReadPost,FileReadPost * normal zR")
 vim.api.nvim_create_autocmd("BufEnter", { pattern = "*", command = "normal zR" })
 
--- LSP Diagnostics Options Setup
-local sign = function(opts)
-  vim.fn.sign_define(opts.name, {
-    texthl = opts.name,
-    text = opts.text,
-    numhl = ''
-  })
-end
-
-sign({name = 'DiagnosticSignError', text = ''})
-sign({name = 'DiagnosticSignWarn', text = ''})
-sign({name = 'DiagnosticSignHint', text = ''})
-sign({name = 'DiagnosticSignInfo', text = ''})
-
-vim.diagnostic.config({
-    virtual_text = false,
-    signs = true,
-    update_in_insert = true,
-    underline = true,
-    severity_sort = false,
-    float = {
-        focusable = false,
-        style  = 'minimal',
-        border = 'rounded',
-        source = 'always',
-        header = '',
-        prefix = '',
-    },
-})
-
-vim.cmd([[
-set signcolumn=yes
-autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
-]])
-
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded",
-})
-
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-    border = "rounded",
-})
