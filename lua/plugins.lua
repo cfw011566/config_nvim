@@ -64,8 +64,11 @@ return packer.startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
+    use 'mfussenegger/nvim-dap'
+
     -- Colorscheme
     use 'tomasr/molokai'
+    use 'navarasu/onedark.nvim'
     use 'Mofiqul/dracula.nvim'
     use 'tanvirtin/monokai.nvim'
     -- use 'martinsione/darkplus.nvim'
