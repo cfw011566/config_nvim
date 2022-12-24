@@ -59,11 +59,17 @@ return packer.startup(function(use)
 --        tag = "nightly"
     }
 
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
     -- colorscheme
-    use 'sainnhe/sonokai'
+    -- use 'sainnhe/sonokai'
     use 'tanvirtin/monokai.nvim'
-    use 'martinsione/darkplus.nvim'
+    -- use 'martinsione/darkplus.nvim'
     use 'tomasr/molokai'
+    use 'Mofiqul/dracula.nvim'
     -- use 'sickill/vim-monokai'
     -- use 'christianchiarulli/nvcode-color-schemes.vim'
 

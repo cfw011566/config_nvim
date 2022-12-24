@@ -17,35 +17,8 @@ require "user.nvim-tree"
 require "user.rust-tools"
 require "user.mason-lsp"
 
---[[
-require("mason").setup({
-    ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
-        }
+require('lualine').setup {
+    options = {
+        theme = 'dracula-nvim'
     }
-})
-
-require("mason-lspconfig").setup()
-
--- After setting up mason-lspconfig you may set up servers via lspconfig
--- require("lspconfig").sumneko_lua.setup {}
--- require("lspconfig").rust_analyzer.setup {}
-require("lspconfig").sumneko_lua.setup({
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { "vim" },
-            },
-            workspace = {
-                library = {
-                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                    [vim.fn.stdpath("config") .. "/lua"] = true,
-                },
-            },
-        },
-    },
-})
---]]
+}
