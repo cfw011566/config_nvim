@@ -7,3 +7,4 @@ nvim setting
 :LspInstall rust_analyzer
 :LspInstall sumneko_lua
 
+# Mason

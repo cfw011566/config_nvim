@@ -18,8 +18,8 @@ opt.fileencoding = 'utf8'
 -- [[ Theme ]]
 opt.syntax = "ON"
 opt.termguicolors = true    -- not work on Terminal of macOS
--- vim.cmd([[colorscheme dracula]])
-vim.cmd([[colorscheme molokai]])
+vim.cmd([[colorscheme dracula]])
+-- vim.cmd([[colorscheme molokai]])
 --[[
 require('onedark').setup {
     style = 'darker'

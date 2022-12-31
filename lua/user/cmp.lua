@@ -1,3 +1,9 @@
+-- Lua version issue
+-- https://github.com/hrsh7th/nvim-cmp/issues/1017
+if not table.unpack then
+    table.unpack = unpack
+end
+
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
     return
