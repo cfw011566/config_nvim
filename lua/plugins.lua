@@ -68,11 +68,12 @@ return packer.startup(function(use)
 
     -- Colorscheme
     use 'tomasr/molokai'
-    use 'navarasu/onedark.nvim'
     use 'Mofiqul/dracula.nvim'
-    use 'tanvirtin/monokai.nvim'
+    -- use 'tanvirtin/monokai.nvim'
     -- use 'martinsione/darkplus.nvim'
     -- use 'sainnhe/sonokai'
+    use 'sainnhe/gruvbox-material'
+    -- use 'sainnhe/everforest'
 
     -- Git
     use 'lewis6991/gitsigns.nvim'
