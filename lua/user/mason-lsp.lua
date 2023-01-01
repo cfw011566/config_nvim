@@ -141,6 +141,13 @@ end
 rust_tools.setup({
     server = {
         on_attach = on_attach,
+        -- rust-tools crashing with expected string, got table in inlay hints code #300
+        -- https://github.com/simrat39/rust-tools.nvim/issues/300#issuecomment-1365302857
+        settings = {
+            ["rust-analyzer"] = {
+                inlayHints = { locationLinks = false },
+            },
+        },
     },
 })
 
