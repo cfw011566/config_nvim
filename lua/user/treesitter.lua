@@ -8,7 +8,7 @@ if not status_ok then
 end
 
 configs.setup {
-    ensure_installed = { "go", "c", "rust" },
+    ensure_installed = { "go", "c", "rust", "lua", "toml" },
     sync_install = false,
     ignore_install = { "" }, -- List of parsers to ignore installing
     highlight = {

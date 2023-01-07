@@ -70,10 +70,12 @@ return packer.startup(function(use)
     use 'tomasr/molokai'
     use 'Mofiqul/dracula.nvim'
     -- use 'tanvirtin/monokai.nvim'
-    -- use 'martinsione/darkplus.nvim'
+    use 'navarasu/onedark.nvim'
     -- use 'sainnhe/sonokai'
     use 'sainnhe/gruvbox-material'
-    -- use 'sainnhe/everforest'
+    use 'ray-x/aurora'
+    -- use 'ellisonleao/gruvbox.nvim'
+    use 'arzg/vim-colors-xcode'
 
     -- Git
     use 'lewis6991/gitsigns.nvim'
