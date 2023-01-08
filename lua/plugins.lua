@@ -73,6 +73,7 @@ return packer.startup(function(use)
     use 'navarasu/onedark.nvim'
     -- use 'sainnhe/sonokai'
     use 'sainnhe/gruvbox-material'
+    use 'morhetz/gruvbox'
     use 'ray-x/aurora'
     -- use 'ellisonleao/gruvbox.nvim'
     use 'arzg/vim-colors-xcode'

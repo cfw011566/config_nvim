@@ -2,7 +2,12 @@
 local opt = vim.opt
 local cmd = vim.api.nvim_command
 
--- :help options
+-- [[ gruvbox ]]
+-- let g:gruvbox_italic = 1
+vim.g.gruvbox_italic = 1
+vim.g.gruvbox_contrast_dark = "hard"
+-- vim.g.gruvbox_improved_strings = 1
+vim.g.gruvbox_improved_warnings = 1
 
 -- [[ Context ]]
 opt.colorcolumn = '80,132'
