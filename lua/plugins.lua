@@ -52,9 +52,9 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
     use {
-        "kyazdani42/nvim-tree.lua",
+        "nvim-tree/nvim-tree.lua",
         requires = {
-            "kyazdani42/nvim-web-devicons",  -- optional, for file icon
+            "nvim-tree/nvim-web-devicons",  -- optional, for file icon
         }
 --        tag = "nightly"
     }

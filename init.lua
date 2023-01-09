@@ -1,8 +1,8 @@
 -- [[ init.lua ]]
 
 -- LEADER
-vim.g.mapleader = ","
-vim.g.localleader = "\\"
+-- vim.g.mapleader = ","
+-- vim.g.localleader = "\\"
 
 -- IMPORTS
 require "options"
