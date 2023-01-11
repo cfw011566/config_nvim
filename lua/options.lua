@@ -18,7 +18,7 @@ opt.syntax = "ON"
 opt.termguicolors = true    -- not work on Terminal of macOS
 -- vim.cmd([[colorscheme dracula]])
 -- vim.cmd([[colorscheme molokai]])
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme gruvbox-material]])
 
 -- [[ Search ]]
 opt.incsearch = true

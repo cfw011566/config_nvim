@@ -5,6 +5,7 @@
 -- vim.g.localleader = "\\"
 
 -- IMPORTS
+require "variables"
 require "options"
 require "keymaps"
 require "plugins"
