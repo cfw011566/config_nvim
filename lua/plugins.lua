@@ -55,8 +55,8 @@ return packer.startup(function(use)
         "nvim-tree/nvim-tree.lua",
         requires = {
             "nvim-tree/nvim-web-devicons",  -- optional, for file icon
-        }
---        tag = "nightly"
+        },
+        tag = "nightly"
     }
 
     use {
