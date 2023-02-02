@@ -67,12 +67,13 @@ return packer.startup(function(use)
     use 'mfussenegger/nvim-dap'
 
     -- Colorscheme
+    use 'sainnhe/gruvbox-material'
+    use 'Shatur/neovim-ayu'
     use 'tomasr/molokai'
     use 'Mofiqul/dracula.nvim'
     -- use 'tanvirtin/monokai.nvim'
     use 'navarasu/onedark.nvim'
     -- use 'sainnhe/sonokai'
-    use 'sainnhe/gruvbox-material'
     use 'morhetz/gruvbox'
     use 'ray-x/aurora'
     -- use 'ellisonleao/gruvbox.nvim'
