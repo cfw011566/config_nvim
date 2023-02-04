@@ -67,17 +67,19 @@ return packer.startup(function(use)
     use 'mfussenegger/nvim-dap'
 
     -- Colorscheme
+    use 'RRethy/nvim-base16'
     use 'sainnhe/gruvbox-material'
     use 'Shatur/neovim-ayu'
     use 'tomasr/molokai'
-    use 'Mofiqul/dracula.nvim'
+    -- use 'Mofiqul/dracula.nvim'
     -- use 'tanvirtin/monokai.nvim'
-    use 'navarasu/onedark.nvim'
+    -- use 'navarasu/onedark.nvim'
     -- use 'sainnhe/sonokai'
     use 'morhetz/gruvbox'
-    use 'ray-x/aurora'
     -- use 'ellisonleao/gruvbox.nvim'
-    use 'arzg/vim-colors-xcode'
+    -- use 'chriskempson/base16-vim'
+    -- use 'ray-x/aurora'
+    -- use 'arzg/vim-colors-xcode'
 
     -- Git
     use 'lewis6991/gitsigns.nvim'
