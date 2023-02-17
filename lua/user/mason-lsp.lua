@@ -94,7 +94,7 @@ require("mason-lspconfig").setup()
 -- require("lspconfig").rust_analyzer.setup {}
 
 -- Lua
-require("lspconfig").sumneko_lua.setup({
+require("lspconfig").lua_ls.setup({
     server = {
         on_attach = on_attach,
     },
