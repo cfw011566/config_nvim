@@ -17,8 +17,8 @@ opt.fileencoding = 'utf8'
 opt.syntax = "ON"
 opt.termguicolors = true    -- not work on Terminal of macOS
 -- vim.cmd([[colorscheme ayu-mirage]])
--- vim.cmd([[colorscheme gruvbox-material]])
-vim.cmd([[colorscheme base16-gruvbox-material-dark-medium]])
+vim.cmd([[colorscheme gruvbox-material]])
+-- vim.cmd([[colorscheme base16-gruvbox-material-dark-medium]])
 
 -- [[ Search ]]
 opt.incsearch = true
