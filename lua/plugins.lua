@@ -80,18 +80,23 @@ return packer.startup(function(use)
     -- use 'chriskempson/base16-vim'
     -- use 'ray-x/aurora'
     -- use 'arzg/vim-colors-xcode'
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     -- Git
     use 'lewis6991/gitsigns.nvim'
 
     -- Telescope
-    use 'nvim-telescope/telescope.nvim'
+    use {
+        'nvim-telescope/telescope.nvim', branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
     -- Treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ":TSUpdate",
     }
+    use 'nvim-treesitter/playground'
 
     -- completion framework:
     use 'hrsh7th/nvim-cmp'
