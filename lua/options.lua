@@ -14,7 +14,7 @@ opt.encoding = 'utf8'
 opt.fileencoding = 'utf8'
 
 -- [[ Theme ]]
-opt.syntax = "ON"
+-- opt.syntax = "ON"
 opt.termguicolors = true    -- not work on Terminal of macOS
 -- vim.cmd([[colorscheme ayu-mirage]])
 -- vim.cmd([[colorscheme gruvbox-material]])
