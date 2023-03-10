@@ -20,13 +20,15 @@ require "user.mason-lsp"
 
 -- vim.cmd('colorscheme rose-pine')
 -- vim.cmd('colorscheme gruvbox-material')
-vim.cmd('colorscheme dracula')
+-- vim.cmd('colorscheme dracula')
+vim.cmd('colorscheme ayu')
 
 require('lualine').setup {
     options = {
 --        theme = 'rose-pine'
 --        theme = 'gruvbox-material'
-        theme = 'dracula-nvim'
+--        theme = 'dracula-nvim'
+        theme = 'ayu'
     }
 }
 
