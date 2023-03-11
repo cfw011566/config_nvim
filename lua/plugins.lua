@@ -75,11 +75,7 @@ return packer.startup(function(use)
     -- use 'tanvirtin/monokai.nvim'
     use 'navarasu/onedark.nvim'
     -- use 'sainnhe/sonokai'
-    use 'morhetz/gruvbox'
-    -- use 'ellisonleao/gruvbox.nvim'
-    -- use 'chriskempson/base16-vim'
-    -- use 'ray-x/aurora'
-    -- use 'arzg/vim-colors-xcode'
+    use 'ellisonleao/gruvbox.nvim'
     use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     -- Git
