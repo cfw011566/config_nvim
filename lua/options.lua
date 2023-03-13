@@ -2,6 +2,8 @@
 local opt = vim.opt
 local cmd = vim.api.nvim_command
 
+opt.clipboard = 'unnamed'   -- copy to system clipboard
+
 -- [[ Context ]]
 opt.colorcolumn = '80,132'
 opt.cursorline = true
