@@ -18,15 +18,19 @@ require "user.nvim-tree"
 -- require "user.rust-tools"
 require "user.mason-lsp"
 
+require "colors"
+
+vim.cmd('colorscheme catppuccin')
 -- vim.cmd('colorscheme rose-pine')
-vim.cmd('colorscheme gruvbox')
+-- vim.cmd('colorscheme gruvbox')
 -- vim.cmd('colorscheme dracula')
 -- vim.cmd('colorscheme ayu')
 
 require('lualine').setup {
     options = {
+        theme = 'catppuccin'
 --        theme = 'rose-pine'
-        theme = 'gruvbox'
+--        theme = 'gruvbox'
 --        theme = 'dracula-nvim'
 --        theme = 'ayu'
     }
