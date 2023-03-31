@@ -19,9 +19,9 @@ require("catppuccin").setup({
         comments = { "italic" },
         conditionals = { "italic" },
         loops = {},
-        functions = { "italic" },
+        functions = {},
         keywords = { "bold" },
-        strings = { "italic", "bold" },
+        strings = { "italic" },
         variables = {},
         numbers = {},
         booleans = {},
@@ -30,9 +30,12 @@ require("catppuccin").setup({
         operators = {},
     },
     color_overrides = {
-        --[[
+--[[
         mocha = {
             teal = "#D8A657", -- macro in Rust
+            base = "#1D2021",
+            mantle = "#191C1D",
+            crust = "#151819",
         },
         mocha = {
             rosewater = "#EA6962",
@@ -62,7 +65,7 @@ require("catppuccin").setup({
             mantle = "#191C1D",
             crust = "#151819",
         },
-        --]]
+--]]
     },
     custom_highlights = {},
     integrations = {

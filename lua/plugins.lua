@@ -67,7 +67,7 @@ return packer.startup(function(use)
     use 'mfussenegger/nvim-dap'
 
     -- Colorscheme
-    use 'RRethy/nvim-base16'
+    -- use 'RRethy/nvim-base16'
     use 'sainnhe/gruvbox-material'
     use 'Shatur/neovim-ayu'
     use 'tomasr/molokai'
