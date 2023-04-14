@@ -111,6 +111,9 @@ return packer.startup(function(use)
     -- snippets
     use 'L3MON4D3/LuaSnip'
 
+    -- Zig
+    use 'ziglang/zig.vim'
+
     -- Golang
     use {
         'ray-x/go.nvim',
