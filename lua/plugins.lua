@@ -76,7 +76,7 @@ return packer.startup(function(use)
     use 'navarasu/onedark.nvim'
     -- use 'sainnhe/sonokai'
     use 'ellisonleao/gruvbox.nvim'
-    use { 'rose-pine/neovim', as = 'rose-pine' }
+    -- use { 'rose-pine/neovim', as = 'rose-pine' }
     use { "catppuccin/nvim", as = "catppuccin" }
 
     -- Git
