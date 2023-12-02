@@ -93,6 +93,14 @@ require("mason-lspconfig").setup()
 -- require("lspconfig").sumneko_lua.setup {}
 -- require("lspconfig").rust_analyzer.setup {}
 
+-- zig
+
+require("lspconfig").zls.setup({
+    server = {
+        on_attach = on_attach,
+    },
+})
+
 -- Lua
 require("lspconfig").lua_ls.setup({
     server = {
