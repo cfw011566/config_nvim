@@ -93,6 +93,18 @@ require("mason-lspconfig").setup()
 -- require("lspconfig").sumneko_lua.setup {}
 -- require("lspconfig").rust_analyzer.setup {}
 
+-- zig
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
+require("lspconfig").zls.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+--    server = {
+--       on_attach = on_attach,
+--    },
+})
+
 -- Lua
 require("lspconfig").lua_ls.setup({
     server = {
