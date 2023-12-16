@@ -26,6 +26,35 @@ local has_words_before = function()
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
+-- from https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance
+local kind_icons = {
+    Text = "",
+    Method = "󰆧",
+    Function = "󰊕",
+    Constructor = "",
+    Field = "󰇽",
+    Variable = "󰂡",
+    Class = "󰠱",
+    Interface = "",
+    Module = "",
+    Property = "󰜢",
+    Unit = "",
+    Value = "󰎠",
+    Enum = "",
+    Keyword = "󰌋",
+    Snippet = "",
+    Color = "󰏘",
+    File = "󰈙",
+    Reference = "",
+    Folder = "󰉋",
+    EnumMember = "",
+    Constant = "󰏿",
+    Struct = "",
+    Event = "",
+    Operator = "󰆕",
+    TypeParameter = "󰅲",
+}
+--[[ from https://github.com/LunarVim/Neovim-from-scratch/blob/master/lua/user/cmp.lua
 local kind_icons = {
     Text = "󰉿",
     Method = "󰆧",
@@ -54,6 +83,7 @@ local kind_icons = {
     TypeParameter = " ",
     Misc = " ",
 }
+-]]
 
 cmp.setup({
     snippet = {

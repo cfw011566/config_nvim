@@ -42,7 +42,16 @@ local sign = function(opts)
   })
 end
 
-sign({name = 'DiagnosticSignError', text = ''})
+-- from https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
+--[[
+sign({name = 'DiagnosticSignError', text = '✘'})
+sign({name = 'DiagnosticSignWarn', text = '▲'})
+sign({name = 'DiagnosticSignHint', text = '⚑'})
+sign({name = 'DiagnosticSignInfo', text = '»'})
+--]]
+-- from https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
+-- sign({name = 'DiagnosticSignError', text = ''})
+sign({name = 'DiagnosticSignError', text = ''})
 sign({name = 'DiagnosticSignWarn', text = ''})
 sign({name = 'DiagnosticSignHint', text = ''})
 sign({name = 'DiagnosticSignInfo', text = ''})
