@@ -130,6 +130,29 @@ return packer.startup(function(use)
     }
     --]]
 
+    -- Zig
+    use({
+        "NTBBloodbath/zig-tools.nvim",
+        -- Load zig-tools.nvim only in Zig buffers
+        ft = "zig",
+        config = function()
+            -- Initialize with default config
+            require("zig-tools").setup()
+        end,
+        requires = {
+            {
+                "akinsho/toggleterm.nvim",
+                config = function()
+                    require("toggleterm").setup()
+                end,
+            },
+            {
+                "nvim-lua/plenary.nvim",
+                module_pattern = "plenary.*"
+            }
+        },
+    })
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
