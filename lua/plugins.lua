@@ -41,27 +41,27 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
     -- My plugins here
-    use "wbthomason/packer.nvim" -- Have packer manage itself
+    use 'wbthomason/packer.nvim' -- Have packer manage itself
 
     -- LSP
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
 
-    use "nvim-lua/popup.nvim"   -- An implementation of the Popup API from vim in Neovim
-    use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+    use 'nvim-lua/popup.nvim'   -- An implementation of the Popup API from vim in Neovim
+    use 'nvim-lua/plenary.nvim' -- Useful lua functions used ny lots of plugins
 
     use {
-        "nvim-tree/nvim-tree.lua",
+        'nvim-tree/nvim-tree.lua',
         requires = {
-            "nvim-tree/nvim-web-devicons",  -- optional, for file icon
+            'nvim-tree/nvim-web-devicons',  -- optional, for file icon
         },
         tag = "nightly"
     }
 
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
     use 'mfussenegger/nvim-dap'
@@ -77,7 +77,7 @@ return packer.startup(function(use)
     -- use 'sainnhe/sonokai'
     use 'ellisonleao/gruvbox.nvim'
     -- use { 'rose-pine/neovim', as = 'rose-pine' }
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use { 'catppuccin/nvim', as = 'catppuccin' }
 
     -- Git
     use 'lewis6991/gitsigns.nvim'
