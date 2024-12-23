@@ -115,8 +115,13 @@ function M.config()
           emoji = "[Emoji]",
         })[entry.source.name]
         if entry.source.name == "copilot" then
-          vim_item.kind = icons.git.Octoface
+          vim_item.kind = icons.misc.Copilot
           vim_item.kind_hl_group = "CmpItemKindCopilot"
+        end
+
+        if entry.source.name == "codeium" then
+          vim_item.kind = icons.misc.Codeium
+          vim_item.kind_hl_group = "CmpItemKindCodeium"
         end
 
         if entry.source.name == "cmp_tabnine" then
@@ -144,6 +149,7 @@ function M.config()
     },
     sources = {
       { name = "copilot" },
+      { name = "codeium" },
       { name = "nvim_lsp" },
       { name = "luasnip" },
       { name = "cmp_tabnine" },

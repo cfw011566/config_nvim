@@ -150,5 +150,9 @@ return {
     Smiley = "",
     Package = "",
     CircuitBoard = "",
+    Copilot = "",
+    CopilotError = "",
+    CopilotWarning = "",
+    Codeium = "󰘦",
   },
 }
