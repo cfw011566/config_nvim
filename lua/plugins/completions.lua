@@ -107,6 +107,8 @@ function M.config()
       format = function(entry, vim_item)
         vim_item.kind = string.format('%s %s', icons.kind[vim_item.kind], vim_item.kind)
         vim_item.menu = ({
+          copilot = "[Copilot]",
+          codeium = "[Codeium]",
           nvim_lsp = "[LSP]",
           nvim_lua = "[Lua]",
           luasnip = "[LuaSnip]",
@@ -148,8 +150,10 @@ function M.config()
       end,
     },
     sources = {
+      -- AI Source : Copilot & Codeium
       { name = "copilot" },
       { name = "codeium" },
+      -- Other Source
       { name = "nvim_lsp" },
       { name = "luasnip" },
       { name = "cmp_tabnine" },
