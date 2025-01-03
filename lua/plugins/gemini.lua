@@ -1,7 +1,7 @@
 return {
   {
     'kiddos/gemini.nvim',
-    enabled = false,
+    -- enabled = false,
     config = function()
       require('gemini').setup()
     end
