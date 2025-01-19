@@ -120,10 +120,9 @@ return {
             vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
             vim.keymap.set("n", "gI", vim.lsp.buf.implementation, {})
             vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
-            vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, {})
-            vim.keymap.set("n", "<space>g", vim.diagnostic.setloclist, {})
-            vim.keymap.set("n", "<space>g", vim.diagnostic.setloclist, {})
-            vim.keymap.set("n", "<space>g", vim.diagnostic.setloclist, {})
+            vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, {})
+            vim.keymap.set("n", "<leader>g", vim.diagnostic.setloclist, {})
+            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
         end
     },
