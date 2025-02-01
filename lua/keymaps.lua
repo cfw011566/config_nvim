@@ -5,10 +5,6 @@ local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 -- local term_opts = { silent = true }
 
--- LEADER
--- vim.g.mapleader = ","
--- vim.g.localleader = "\\"
-
 -- Better window navigation
 keymap('n', '<C-h>', '<C-w>h', opts)
 keymap('n', '<C-j>', '<C-w>j', opts)
